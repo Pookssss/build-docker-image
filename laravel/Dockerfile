@@ -67,7 +67,7 @@ RUN chmod +x /var/www/docker/run.sh
 
 
 
-RUN composer install --optimize-autoloader --no-dev
+RUN /bin/sh -c composer install --optimize-autoloader --no-dev
 
 # RUN php artisan route:cache && php artisan view:cache && php artisan config:cache
 RUN php artisan view:cache && php artisan view:clear
